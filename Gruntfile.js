@@ -1,12 +1,12 @@
 module.exports = function(grunt){
   grunt.initConfig({
-    csslint:{
+    eslint:{
       options: {
-        csslintrc: '.csslintrc'
+        configFile: '.eslintrc.json'    
       },
-      src: ['*.css']   
-    }         
+      target: ['rectangle.js']       
+    }             
   });
-    grunt.loadNpmTasks('grunt-contrib-csslint');
-    grunt.registerTask('default',['csslint']);
+  grunt.loadNpmTasks('grunt-eslint');
+  grunt.registerTask('default',['eslint']);
 };
