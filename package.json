@@ -1,22 +1,10 @@
 {
-  "name": "grunt-demo",
+  "name":"grunt-demo",
   "version": "1.0.0",
   "description": "grunt-demo",
   "main": "index.js",
-  "dependencies": {
-    "grunt-contrib-less": "^2.0.0"
-  },
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "grunt": "^1.0.3",
-    "grunt-mocha": "^1.2.0",
-    "grunt-mocha-cli": "^4.0.0",
-    "grunt-mocha-istanbul": "^5.0.2",
-    "istanbul": "^0.4.5",
-    "mocha": "^6.0.2"
-  },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha"                  
   },
   "repository": {
     "type": "git",
@@ -27,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/gusutong/grunt-demo/issues"
   },
-  "homepage": "https://github.com/gusutong/grunt-demo#readme"
+  "homepage": "https://github.com/gusutong/grunt-demo#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "grunt": "^1.0.3",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-mocha-cli": "^4.0.0",
+    "grunt-mocha-istanbul": "^5.0.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^6.0.2"
+  }
 }

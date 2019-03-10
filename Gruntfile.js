@@ -30,4 +30,4 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['mochacli']);   
   grunt.registerTask('cover', ['mocha_istanbul']);
   grunt.registerTask('check-cover', ['istanbul_check_coverage']);
-}
+};
