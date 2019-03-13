@@ -18,7 +18,7 @@
   "homepage": "https://github.com/gusutong/grunt-demo#readme",
   "devDependencies": {
     "grunt": "^1.0.3",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-less": "^2.0.0"
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-spritesmith": "^6.6.3"
   }
 }
