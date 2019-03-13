@@ -1,14 +1,16 @@
 module.exports = function(grunt){
   grunt.initConfig({
-    uglify: {
-      release: {
-        files: {
-          'dist/rectangle.min.js': ['./rectangle.js'],
-          'dist/calc.min.js':['./calc.js']            
-        }               
-      }                                
-    }              
+    imagemin:{
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: './images',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'dist/'                                        
+        }]              
+      }          
+    }      
   });
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask('default',['uglify']);
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.registerTask('default',['imagemin']);
 };
