@@ -1,17 +1,14 @@
 module.exports = function(grunt){
   grunt.initConfig({
-    cssmin:{
-      options: {
-        mergeIntoShorthands: false,
-        roundingPrecision: -1    
-      },
-      target: {
-      files: {
-        'rectangle.min.css': ['rectangle.css']            
-      }                         
-    }   
-  }             
-});
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.registerTask('default',['cssmin']);
+    uglify: {
+      release: {
+        files: {
+          'dist/rectangle.min.js': ['./rectangle.js'],
+          'dist/calc.min.js':['./calc.js']            
+        }               
+      }                                
+    }              
+  });
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.registerTask('default',['uglify']);
 };
