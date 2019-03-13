@@ -1,17 +1,16 @@
 module.exports = function(grunt){
   grunt.initConfig({
-    htmlmin:{
-      dev: {     // Another target
-        options:{
-          collapseWhitespace:true,
-          preservelLineBreaks:false
-        }
-        files: {
-          'dist/index.html': 'src/index.html'
-        }
-      }                   
-    }            
+    concat:{
+      options: {
+        separator: ';'         
+      },
+      dist: {
+        src: ['rectangle.js', 'calc.js'],
+        dest: 'dist/bundle.js',        
+      }      
+    }             
   });
-  grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  grunt.registerTask('default',['htmlmin']);
+  grunt.loadNpmTasks('grunt-contrib-concat');
+
+  grunt.registerTask('default',['concat']);
 };
