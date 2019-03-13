@@ -1,17 +1,17 @@
 module.exports = function(grunt){
   grunt.initConfig({
-    htmlmin:{
-      dev: {     // Another target
-        options:{
-          collapseWhitespace:true,
-          preservelLineBreaks:false
-        }
-        files: {
-          'dist/index.html': 'src/index.html'
-        }
-      }                   
-    }            
-  });
-  grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  grunt.registerTask('default',['htmlmin']);
+    cssmin:{
+      options: {
+        mergeIntoShorthands: false,
+        roundingPrecision: -1    
+      },
+      target: {
+      files: {
+        'rectangle.min.css': ['rectangle.css']            
+      }                         
+    }   
+  }             
+});
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.registerTask('default',['cssmin']);
 };
